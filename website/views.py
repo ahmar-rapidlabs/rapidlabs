@@ -1,5 +1,3 @@
-# views.py
-
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -40,8 +38,7 @@ def send_email(request):
                 'Testing. Please Dont reply',
                 email_message,
                 'contact@rapidlabs.ai', 
-                # ['info@rapidlabs.ai', 'ahmaraamir33@gmail.com'],  
-                ['ahmaraamir33@gmail.com'],
+                ['info@rapidlabs.ai', 'ahmaraamir33@gmail.com'],  
                 fail_silently=False,
             )
             return JsonResponse({'message': 'Email sent successfully'})
